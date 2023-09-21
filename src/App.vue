@@ -1,27 +1,18 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+
 </script>
 
 <template>
-  <section class="flex justify-between mx-10 py-1">
-    <div class="">
+  <section class="flex mx-10 py-1">
+    <div class="w-20">
       <h2 class="font-bold text-blue-950 text-lg">icon</h2>
     </div>
-    <ul class="flex space-x-2">
-      <li>
+    <ul class="flex space-x-2 w-full justify-center">
+      <li class="border-r-2 pr-1">
         <router-link to="/">Home</router-link>
       </li>
       <li>
-        <router-link to="/about">About</router-link>
-      </li>
-      <li>
-        <router-link to="/contact">Contact</router-link>
-      </li>
-      <li>
-        <router-link to="/post/1">Post-1</router-link>
-      </li>
-      <li>
-        <RouterLink to="/post/2">post-2</RouterLink>
+        <router-link to="/products">Product-List</router-link>
       </li>
     </ul>
   </section>

@@ -1,41 +1,28 @@
 
 import { createRouter , createWebHistory } from "vue-router";
 
-import Helloworld from '../components/HelloWorld.vue';
-import About from '../components/About.vue';
-import Contact from '../components/Contact.vue';
-import Post from '../components/Post.vue';
-import AboutMango from '../components/AboutMango.vue';
-import ChildListOne from '../components/ChildListOne.vue';
-
+import Home from '../components/Home.vue';
+import Product from '../components/ProductList.vue';
+import DetalsPage from '../components/ProductDetals.vue'
+import NotFound from '../components/NotFound.vue'
 const routes = [
     {
         path:'/',
-        component:Helloworld
+        component:Home
+    },
+    
+    {
+        path:'/products',
+        component:Product,
+       
     },
     {
-        path:'/about',
-        component:About,
-        children:[
-            {
-                path:'/AboutMango',
-                component:AboutMango
-            }
-        ]
+        path:'/products/:id',
+        component:DetalsPage
     },
     {
-        path:'/contact',
-        component:Contact
-    },
-    {
-        path:'/post/:id',
-        component:Post,
-        children:[
-            {
-                path:'/childListOne/:id',
-                component:ChildListOne
-            }
-        ]
+        path:'/:hkjhkj(.*)*',
+        component:NotFound
     }
     
 
